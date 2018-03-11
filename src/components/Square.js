@@ -18,12 +18,12 @@ export class Square extends PureComponent {
       this.props.makeMove(this.props.x, this.props.y)
   }
 
-  classNames() {
+  classNames= ()=> {
     const { value } = this.props
 
     let classnames = ['Square']
     classnames.push(`fill-${value || 0}`)
-    //if (locked) classnames.push('locked')
+    if (this.props.locked) classnames.push('locked')
     //if (dupe) classnames.push('dupe')
     //if (error) classnames.push('wrong')
 

@@ -9,14 +9,30 @@
   border: 4px solid #eee;
 }
 
+.Square.locked:hover::after {
+  opacity: .3;
+  content: '\f023';
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 180%;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+}
+
 .Square.fill-1 {
   background-color: #D0021B;
+}
+
+.Square.fill-1.locked {
+  background-color: #9E0215;
 }
 
 .Square.fill-2 {
   background-color: #4A90E2;
 }
 
-.Square.fill-0 {
-  background-color: inherit;
+.Square.fill-2.locked {
+  background-color: #2F619B;
 }
