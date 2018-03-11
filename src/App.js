@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Board from './containers/Board'
 import CreateGameButton from './components/CreateGameButton'
 import Progress from './components/Progress'
+import Finished from './components/Finished'
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <CreateGameButton/>
         <Progress/>
         <Board/>
+        <Finished/>
       </div>
     );
   }

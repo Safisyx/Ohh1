@@ -6,10 +6,15 @@ import './CreateGameButton.css'
 
 export class CreateGameButton extends PureComponent {
   static propTypes = {
-    createGame: PropTypes.func.isRequired
+    createGame: PropTypes.func.isRequired,
+    label: PropTypes.String
   }
 
   handleClick = () => {
+    this.props.createGame(6)
+  }
+
+  componentWillMount() {
     this.props.createGame(6)
   }
 
@@ -19,7 +24,7 @@ export class CreateGameButton extends PureComponent {
         onClick={this.handleClick}
         className="CreateGameButton"
       >
-        New Game
+        {this.props.label || 'New game'}
       </button>
     )
   }
