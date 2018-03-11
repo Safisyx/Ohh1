@@ -14,10 +14,6 @@ export class CreateGameButton extends PureComponent {
     this.props.createGame(6)
   }
 
-  componentWillMount() {
-    this.props.createGame(6)
-  }
-
   render() {
     return (
       <button

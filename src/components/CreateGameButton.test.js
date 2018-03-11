@@ -6,7 +6,7 @@ import { CreateGameButton } from './CreateGameButton'
 
 describe('<CreateGameButton />', () => {
   const createGame = sinon.spy()
-  const button = shallow(<CreateGameButton createGame={createGame} />)
+  const button = shallow(<CreateGameButton createGame={createGame} label={'New game'}/>)
 
   it('renders a button tag', () => {
     expect(button).toHaveTagName('button')
