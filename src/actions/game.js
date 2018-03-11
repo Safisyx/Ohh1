@@ -1,6 +1,7 @@
 // src/actions/game.js
 
 import { CREATE_GAME } from './types'
+import {MOVE} from './types'
 import { fillBoard } from '../lib/game'
 
 export const createGame = (rows = 6) => {
@@ -10,6 +11,16 @@ export const createGame = (rows = 6) => {
     payload: {
       board,
       locked
+    }
+  }
+}
+
+export const move = (row,col) => {
+  return {
+    type: MOVE,
+    payload:{
+      row,
+      col
     }
   }
 }

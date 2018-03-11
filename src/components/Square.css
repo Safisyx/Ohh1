@@ -16,3 +16,7 @@
 .Square.fill-2 {
   background-color: #4A90E2;
 }
+
+.Square.fill-0 {
+  background-color: inherit;
+}
