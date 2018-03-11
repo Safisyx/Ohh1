@@ -36,3 +36,7 @@
 .Square.fill-2.locked {
   background-color: #2F619B;
 }
+
+.Square.dupe {
+  border-color: yellow;
+}
