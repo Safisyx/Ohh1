@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import Board from './containers/Board'
 import CreateGameButton from './components/CreateGameButton'
+import Progress from './components/Progress'
 import './App.css';
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         <h1 className="title">0hh1</h1>
         <CreateGameButton/>
+        <Progress/>
         <Board/>
       </div>
     );
