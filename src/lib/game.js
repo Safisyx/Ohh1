@@ -8,27 +8,28 @@
 // => [1,2,3]
 //
 export const threeOrMoreInARow = (rowOrCol) => {
-  // const counts = rowOrCol
-  //   .join('')
-  //   .match(/([1-2]|0)\1*/g) || []
-  // console.log(counts);
-  //
-  // const matches = []
-  //   .concat
-  //   .apply([], counts.map((m, i) =>
-  //     new Array(m.length).fill(m.match(/0/) ? null : m.length)
-  //   ))
-  //   .map((l, i) => (l > 2 ? i : null))
-  //   .filter((l) => (l !== null))
-  const str = rowOrCol.join('')
-  const one = str.indexOf('111')
-  const two = str.indexOf('222')
-  if (one>-1)
-    return ([one,one+1,one+2])
-  else if (two>-1)
-    return ([two,two+1,two+2])
-  else
-    return []
+  const counts = rowOrCol
+    .join('')
+    .match(/([1-2]|0)\1*/g) || []
+  //console.log(counts);
+
+  const matches = []
+    .concat
+    .apply([], counts.map((m, i) =>
+      new Array(m.length).fill(m.match(/0/) ? null : m.length)
+    ))
+    .map((l, i) => (l > 2 ? i : null))
+    .filter((l) => (l !== null))
+  return matches
+  // const str = rowOrCol.join('')
+  // const one = str.indexOf('111')
+  // const two = str.indexOf('222')
+  // if (one>-1)
+  //   return ([one,one+1,one+2])
+  // else if (two>-1)
+  //   return ([two,two+1,two+2])
+  // else
+  //   return []
 }
 
 export const numberOfValues = (rowOrCol,value) => {

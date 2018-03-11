@@ -40,3 +40,6 @@
 .Square.dupe {
   border-color: yellow;
 }
+.Square.error {
+  border-color: yellow;
+}
