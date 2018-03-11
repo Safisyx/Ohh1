@@ -1,19 +1,22 @@
 //scr/reducers/board.js
 
-// export default function(state = [], action = {}) {
-//   return state
-// }
-const initialState = [
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0],
-  [0,0,0,0,0,0]
+import { CREATE_GAME } from '../actions/types'
+
+const emptyBoard = [
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ],
+  [ 0,0,0,0,0,0 ]
 ]
 
+export default (state = emptyBoard, { type, payload } = {}) => {
+  switch (type) {
+    case CREATE_GAME :
+      return [].concat(payload.board)
 
-
-export default (state = initialState, { type, payload } = {}) => {
-  return state
+    default :
+      return state
+  }
 }

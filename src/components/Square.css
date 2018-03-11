@@ -8,3 +8,11 @@
   max-height: 75px;
   border: 4px solid #eee;
 }
+
+.Square.fill-1 {
+  background-color: #D0021B;
+}
+
+.Square.fill-2 {
+  background-color: #4A90E2;
+}
