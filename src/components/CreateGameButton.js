@@ -7,7 +7,7 @@ import './CreateGameButton.css'
 export class CreateGameButton extends PureComponent {
   static propTypes = {
     createGame: PropTypes.func.isRequired,
-    label: PropTypes.String
+    label: PropTypes.string
   }
 
   handleClick = () => {

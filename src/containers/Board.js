@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import Square from '../components/Square'
 import {duplicateRows, duplicateCols, rows, cols, threeOrMoreInARow} from '../lib/game'
 import './Board.css'
+import {createGame} from '../actions/game'
 
 export class Board extends PureComponent {
   static propTypes = {
@@ -44,7 +45,9 @@ export class Board extends PureComponent {
       dupe={dupe} error={error} />
     )
   }
-
+  componentWillMount = () => {
+    this.props.createGame()
+  }
   render() {
     return (
       <div className="Board">
@@ -68,4 +71,4 @@ const mapStateToProps = ({board}) => {
     errorCols: cols(board).map(c => (threeOrMoreInARow(c))),
 }}
 // Then pass it to connect:
-export default connect(mapStateToProps)(Board)
+export default connect(mapStateToProps, {createGame})(Board)
